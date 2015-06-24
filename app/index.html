@@ -1,0 +1,27 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.config({ baseURL: '/js' });
+      System.import('main');
+    </script>
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <div id="app"></div>
+  </body>
+</html>
