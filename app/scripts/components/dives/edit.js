@@ -54,7 +54,6 @@ class DiveEdit extends mixins(FirebaseMixin('dive')) {
 
   render() {
     var dive = this.state.dive;
-    console.log(dive);
     if(!dive) return false;
 
     var avatar = dive.avatar || "http://placehold.it/168x168";
@@ -64,7 +63,7 @@ class DiveEdit extends mixins(FirebaseMixin('dive')) {
         <MessageBox ref="message" />
         <header className="bar bar-header">
           <Router.Link to="dives:list" className="button button-icon icon ion-ios-arrow-back"></Router.Link>
-          <h1 className="h1 title">{dive.firstName} {dive.lastName}</h1>
+          <h1 className="h1 title">{dive.name}</h1>
           {deleteLink}
         </header>
         <div className="scroll-content has-header">
@@ -75,7 +74,7 @@ class DiveEdit extends mixins(FirebaseMixin('dive')) {
             </label>
             <label className="item item-input">
               <span className="input-label">Category</span>
-              <input type="text" placeholder="Forward Dive" defaultValue={dive.lastName} ref="lastName" />
+              <input type="text" placeholder="Forward Dive" defaultValue={dive.category} ref="category" />
             </label>
 
             <div className="padding">

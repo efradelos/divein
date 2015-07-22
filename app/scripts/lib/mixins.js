@@ -19,5 +19,12 @@ export default function mixin(...mixins) {
       });
     };
   });
+  _.each(mixins, (mixin) => {
+    _.each(mixin, (method, name) => {
+      if (!_.contains(lifecycleMethods, name)) {
+        Mixin.prototype[name] = method.bind(this);
+      }
+    });
+  });
   return Mixin;
 }

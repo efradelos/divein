@@ -25,10 +25,10 @@ export default class Navigation extends React.Component {
             <i className="icon ion-home"></i>
             <span className="tab-label">Home</span>
           </Link>
-          <a className="tab-item" href="#">
+          <Link to="meets:list" className="tab-item" href="#">
             <i className="icon ion-trophy"></i>
             <span className="tab-label">Meets</span>
-          </a>
+          </Link>
           <Link to="dives:list" className="tab-item">
             <i className="icon ion-waterdrop"></i>
             <span className="tab-label">Dives</span>
